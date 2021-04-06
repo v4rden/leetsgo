@@ -1,7 +1,9 @@
 package PathSum
 
-import "testing"
-import "leetsgo/internal"
+import (
+	"leetsgo/internal/binarytree"
+	"testing"
+)
 
 func TestPathSumTableDriven(t *testing.T) {
 	var tests = []struct {
@@ -11,22 +13,22 @@ func TestPathSumTableDriven(t *testing.T) {
 		result bool
 	}{
 		{"T1",
-			internal.ArrayToBinaryTree([]int{5, 4, 8, 11, internal.Null, 13, 4, 7, 2, internal.Null, internal.Null, internal.Null, 1}),
+			binarytree.ArrayToBinaryTree([]int{5, 4, 8, 11, binarytree.Null, 13, 4, 7, 2, binarytree.Null, binarytree.Null, binarytree.Null, 1}),
 			22,
 			true,
 		},
 		{"T2",
-			internal.ArrayToBinaryTree([]int{1, 2, 3}),
+			binarytree.ArrayToBinaryTree([]int{1, 2, 3}),
 			5,
 			false,
 		},
 		{"T3",
-			internal.ArrayToBinaryTree([]int{1, 2}),
+			binarytree.ArrayToBinaryTree([]int{1, 2}),
 			50,
 			false,
 		},
 		{"T4",
-			internal.ArrayToBinaryTree([]int{}),
+			binarytree.ArrayToBinaryTree([]int{}),
 			0,
 			false,
 		},

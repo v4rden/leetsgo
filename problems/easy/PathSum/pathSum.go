@@ -1,8 +1,10 @@
 package PathSum
 
-import "leetsgo/internal"
+import (
+	"leetsgo/internal/binarytree"
+)
 
-type TreeNode = internal.TreeNode
+type TreeNode = binarytree.TreeNode
 
 func hasPathSum(root *TreeNode, targetSum int) bool {
 	if root == nil {
